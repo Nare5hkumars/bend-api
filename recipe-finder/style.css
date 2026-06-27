@@ -158,8 +158,6 @@ main {
 
 @keyframes spin { to { transform: rotate(360deg); } }
 
-.hidden { display: none; }
-
 .status-msg {
   text-align: center;
   color: #888;
@@ -317,3 +315,5 @@ main {
   .detail-header img { width: 100%; }
   .recipe-grid { grid-template-columns: 1fr; }
 }
+
+.hidden { display: none !important; }
