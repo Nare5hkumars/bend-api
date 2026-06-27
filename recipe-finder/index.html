@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipe Finder</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <h1>Recipe Finder</h1>
+      <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Search recipes..." autocomplete="off">
+        <button id="searchBtn">Search</button>
+      </div>
+      <button id="favToggle" class="fav-toggle-btn">View Favorites</button>
+    </div>
+  </header>
+
+  <main>
+    <div id="content">
+      <div id="recipeGrid" class="recipe-grid"></div>
+      <div id="loader" class="loader hidden"></div>
+      <p id="statusMsg" class="status-msg"></p>
+      <button id="loadMoreBtn" class="load-more hidden">Load More</button>
+    </div>
+
+    <div id="detailView" class="detail-view hidden">
+      <button id="backBtn" class="back-btn">&larr; Back</button>
+      <div id="detailContent"></div>
+    </div>
+  </main>
+
+  <div id="favModal" class="modal hidden">
+    <div class="modal-content">
+      <span id="closeModal" class="close">&times;</span>
+      <h2>Your Favorites</h2>
+      <div id="favList" class="fav-list"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
