@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: #f0f2f5;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.container {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+  width: 100%;
+  max-width: 500px;
+  margin-top: 40px;
+  height: fit-content;
+}
+
+h1 {
+  text-align: center;
+  color: #1a1a2e;
+  margin-bottom: 20px;
+  font-size: 28px;
+}
+
+form {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+#taskInput {
+  flex: 1;
+  padding: 10px 14px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+#taskInput:focus {
+  border-color: #4a6cf7;
+}
+
+button {
+  padding: 10px 20px;
+  background: #4a6cf7;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background: #3b5de7;
+}
+
+.error {
+  color: #e74c3c;
+  font-size: 14px;
+  min-height: 20px;
+  margin: 4px 0 12px;
+}
+
+#taskList {
+  list-style: none;
+  margin-top: 12px;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  margin-bottom: 6px;
+  background: #f8f9fa;
+  transition: background 0.2s;
+}
+
+.task-item:hover {
+  background: #eef1f5;
+}
+
+.task-item.completed .task-text {
+  text-decoration: line-through;
+  color: #999;
+}
+
+.task-text {
+  flex: 1;
+  font-size: 15px;
+  word-break: break-word;
+}
+
+.task-item input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  accent-color: #4a6cf7;
+}
+
+.delete-btn {
+  background: transparent;
+  color: #e74c3c;
+  padding: 4px 10px;
+  font-size: 18px;
+  border-radius: 6px;
+}
+
+.delete-btn:hover {
+  background: #fde8e8;
+}
+
+@media (max-width: 480px) {
+  .container {
+    margin-top: 20px;
+    padding: 16px;
+  }
+
+  form {
+    flex-direction: column;
+  }
+
+  button {
+    width: 100%;
+  }
+}
