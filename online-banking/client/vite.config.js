@@ -5,6 +5,7 @@ export default defineConfig({
   plugins: [react()],
   server: {
     port: 3001,
+    allowedHosts: ['3001--main--envt5t--driff.aisoftdev.in'],
     proxy: {
       '/api': {
         target: 'http://localhost:5000',
